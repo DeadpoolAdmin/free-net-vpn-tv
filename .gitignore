@@ -1,0 +1,21 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Real WireGuard test config holds a private key — never commit it (template is .example)
+/app/src/main/assets/test_wireguard.conf
+# Local Docker WireGuard server keys/peer configs + the detected LAN IP
+/server/docker/config/
+/server/docker/.env

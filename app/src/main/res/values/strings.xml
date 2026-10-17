@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">Free Net VPN</string>
+
+    <!-- Branding / positioning -->
+    <string name="tagline">Free VPN for Android TV</string>
+    <string name="subtagline">Fast, simple, and free VPN access for your TV</string>
+    <string name="connect_securely_free">Connect securely for free</string>
+    <string name="no_subscription_required">No subscription required</string>
+    <string name="free_badge">FREE</string>
+
+    <!-- Welcome -->
+    <string name="welcome_get_started">Get Started</string>
+    <string name="welcome_body">Protect your connection on your TV — no account, no subscription, no cost.</string>
+    <string name="welcome_preparing">Setting up your secure connection…</string>
+    <string name="welcome_auth_failed">We couldn\'t set up your connection. Please try again.</string>
+
+    <!-- Activation -->
+    <string name="activation_optional">Optional step</string>
+    <string name="activation_title">Activate this device</string>
+    <string name="activation_instructions">On your phone or computer, open the activation page and enter the code below.</string>
+    <string name="activation_portal_hint">Visit the activation page shown on your portal and enter this code.</string>
+    <string name="activation_code_label">Your activation code</string>
+    <string name="activation_waiting">Waiting for activation…</string>
+    <string name="activation_check_again">Check again</string>
+    <string name="activation_skip">Continue without activating</string>
+    <string name="activation_success">Device activated</string>
+    <string name="activation_expired">This activation code expired. Generating a new one…</string>
+
+    <!-- Home / main VPN screen -->
+    <string name="home_status_label">Status</string>
+    <string name="home_selected_location">Location</string>
+    <string name="home_selected_server">Server</string>
+    <string name="home_no_server">No server selected</string>
+    <string name="home_choose_server">Choose a free VPN location</string>
+    <string name="home_connect">Connect</string>
+    <string name="home_disconnect">Disconnect</string>
+    <string name="home_cancel">Cancel</string>
+    <string name="home_retry">Try again</string>
+    <string name="home_settings">Settings</string>
+    <string name="home_account">Account</string>
+    <string name="home_change_server">Change location</string>
+
+    <!-- Account -->
+    <string name="account_title">Account</string>
+    <string name="account_user_id">User ID</string>
+    <string name="account_device_type">Device type</string>
+    <string name="account_empty">Your device isn\'t registered yet. Reopen the app to set it up.</string>
+    <string name="home_timer_zero">00:00:00</string>
+    <string name="home_sim_banner">Developer build — simulated tunnel, traffic is not encrypted yet.</string>
+
+    <!-- Connection states -->
+    <string name="state_disconnected">Disconnected</string>
+    <string name="state_connecting">Connecting…</string>
+    <string name="state_connected">Connected</string>
+    <string name="state_disconnecting">Disconnecting…</string>
+    <string name="state_error">Connection error</string>
+
+    <!-- Server selection -->
+    <string name="servers_title">Choose a free VPN location</string>
+    <string name="servers_recommended">Recommended</string>
+    <string name="servers_load">Load %1$d%%</string>
+    <string name="servers_ping">%1$d ms</string>
+    <string name="servers_status_available">Available</string>
+    <string name="servers_status_busy">Busy</string>
+    <string name="servers_status_unavailable">Unavailable</string>
+    <string name="servers_unavailable_hint">This free VPN server is currently unavailable. Please choose another location.</string>
+    <string name="servers_empty">No free servers available right now. Please try again later.</string>
+    <string name="servers_refresh">Refresh</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_auto_connect">Auto-connect on app start</string>
+    <string name="settings_auto_connect_desc">Connect to your last location automatically when the app opens.</string>
+    <string name="settings_auto_reconnect">Reconnect automatically</string>
+    <string name="settings_auto_reconnect_desc">Try to restore the VPN if the connection drops.</string>
+    <string name="settings_show_notification">Show connection status notification</string>
+    <string name="settings_show_notification_desc">Display an ongoing notification while the VPN is connected.</string>
+    <string name="settings_clear_activation">Clear device activation</string>
+    <string name="settings_clear_activation_desc">Remove this device\'s activation and start over.</string>
+    <string name="settings_privacy">Privacy policy</string>
+    <string name="settings_privacy_desc">How we handle your data. We never log your browsing.</string>
+    <string name="settings_about">About Free VPN</string>
+    <string name="settings_about_desc">Version and licensing information.</string>
+    <string name="settings_on">On</string>
+    <string name="settings_off">Off</string>
+
+    <!-- Free access states -->
+    <string name="access_limited">Free VPN access is currently limited because of high demand.</string>
+    <string name="access_blocked">Free VPN access is temporarily unavailable on this device.</string>
+    <string name="access_server_unavailable">No free servers are available right now. Please choose another location.</string>
+    <string name="access_maintenance">Free VPN service is temporarily under maintenance. Please try again later.</string>
+
+    <!-- Errors -->
+    <string name="error_no_internet">Please check your internet connection.</string>
+    <string name="error_permission_denied">VPN permission is required to connect.</string>
+    <string name="error_server_unavailable">This free VPN server is currently unavailable. Please choose another location.</string>
+    <string name="error_invalid_config">We couldn\'t load this server\'s configuration. Please try another location.</string>
+    <string name="error_tunnel_failed">The VPN tunnel could not start. Please try again.</string>
+    <string name="error_backend_unavailable">We\'re having trouble reaching the service. Please try again later.</string>
+    <string name="error_activation_expired">Your device activation has expired. Please activate again.</string>
+    <string name="error_unknown">Something went wrong. Please try again.</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">VPN status</string>
+    <string name="notif_channel_desc">Shows whether the free VPN is connected.</string>
+    <string name="notif_connecting_title">Connecting to Free VPN…</string>
+    <string name="notif_connected_title">Free VPN is connected</string>
+    <string name="notif_connected_text">Connected to %1$s — %2$s</string>
+    <string name="notif_disconnecting_title">Disconnecting…</string>
+    <string name="notif_action_disconnect">Disconnect</string>
+
+    <!-- About -->
+    <string name="about_body">Free VPN for Android TV. No subscription, no premium plans, no browsing history collection.</string>
+    <string name="privacy_body">We do not collect or store your browsing history, visited websites, DNS queries, or traffic content. We keep only basic operational logs (device ID, selected server, connection times, success/failure, app version) to keep the free service running and prevent abuse.</string>
+</resources>

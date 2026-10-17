@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="16dp"
+    android:viewportWidth="24"
+    android:viewportHeight="16">
+    <path android:fillColor="#006AA7" android:pathData="M0,0h24v16H0z" />
+    <!-- Yellow Nordic cross, vertical bar offset toward the hoist (left) -->
+    <path android:fillColor="#FECC00" android:pathData="M7,0h2.5v16H7z" />
+    <path android:fillColor="#FECC00" android:pathData="M0,6.75h24v2.5H0z" />
+</vector>

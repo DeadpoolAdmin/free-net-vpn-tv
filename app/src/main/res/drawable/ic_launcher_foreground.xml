@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  App-icon foreground: the supplied shield brand logo (ic_app_logo) inset into the centre of the
+  108x108 adaptive canvas so the cyan shield + "VPN" mark sits inside the 72dp safe zone and is
+  never clipped by the launcher mask. Insets are FRACTIONS of the layer bounds, so the artwork
+  keeps the same relative size no matter what raster size the launcher renders at. Left/right 17%
+  -> ~66% width; top/bottom 15.5% keeps the artwork's ~0.96 (w:h) aspect ratio. Pairs with the
+  white background layer to render the logo on a clean white tile.
+-->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_app_logo"
+    android:insetLeft="17%"
+    android:insetRight="17%"
+    android:insetTop="15.5%"
+    android:insetBottom="15.5%" />

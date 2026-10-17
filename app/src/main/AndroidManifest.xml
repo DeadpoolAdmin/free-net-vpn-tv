@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Core networking -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Foreground service for the VPN tunnel. specialUse is the correct type for a VpnService on
+         Android 14+ (there is no dedicated VPN FGS type). The justification subtype is declared on
+         the <service> below and must also be submitted in Play Console. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- Status notification on Android 13+ -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Leanback is preferred (Android TV) but NOT required, so the app also installs on phones/tablets. -->
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <application
+        android:name=".VpnApp"
+        android:allowBackup="false"
+        android:banner="@drawable/app_banner"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FreeVpn"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.FreeVpn">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- LEANBACK_LAUNCHER makes the app appear on the Android TV home screen. -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!-- LAUNCHER makes the same app appear in the phone/tablet app drawer. -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Real Android VpnService. BIND_VPN_SERVICE restricts binding to the system. -->
+        <service
+            android:name=".vpn.MyVpnService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+            <!-- Required on Android 14+ to justify the specialUse foreground service type. -->
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="vpn" />
+        </service>
+
+        <!--
+        PRODUCTION TODO (see TODO.md): when flipping to the real WireGuard GoBackend, the official
+        com.wireguard.android:tunnel library bundles its OWN VpnService. You must either let it own the
+        tunnel (declare com.wireguard.android.backend.GoBackend$VpnService here and retire MyVpnService),
+        or keep MyVpnService and drive the userspace backend yourself. NEVER run two VpnServices at once.
+        -->
+
+    </application>
+
+</manifest>

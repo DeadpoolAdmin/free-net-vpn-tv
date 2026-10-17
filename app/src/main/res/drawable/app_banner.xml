@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android TV home-screen banner (320x180). The leanback launcher renders this tile as the app's
+  presence on the TV home row. Treatment: the supplied shield brand logo (ic_app_logo) centered on
+  a transparent tile, so it sits directly on the launcher's own backdrop. The first item fixes the
+  320x180 canvas (so the layer-list keeps the 16:9 banner aspect and the logo stays centered); the
+  logo item keeps the artwork's ~0.96 (w:h) aspect ratio.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="320dp"
+        android:height="180dp"
+        android:gravity="fill">
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+    <item
+        android:width="150dp"
+        android:height="157dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_app_logo" />
+</layer-list>

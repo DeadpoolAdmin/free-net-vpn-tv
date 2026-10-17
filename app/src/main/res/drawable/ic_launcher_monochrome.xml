@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Themed-icon (monochrome) silhouette of the VPN keyhole mark + "VPN" wordmark. The launcher
+  replaces the colour with its own wallpaper-derived tint, so the value here only needs to be
+  opaque. Same geometry / scale / centering as ic_launcher_foreground.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:pivotX="49.5"
+        android:pivotY="58"
+        android:scaleX="0.66"
+        android:scaleY="0.66"
+        android:translateX="4.5"
+        android:translateY="-4">
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#000000"
+            android:strokeWidth="9"
+            android:strokeLineCap="round"
+            android:pathData="M40,58 A21,21 0 1 1 60,58" />
+        <path
+            android:fillColor="#000000"
+            android:pathData="M41,34 a9,9 0 1,0 18,0 a9,9 0 1,0 -18,0 Z" />
+        <path
+            android:fillColor="#000000"
+            android:pathData="M44,37 L40,59 Q40,62 43,62 L57,62 Q60,62 60,59 L56,37 Z" />
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#000000"
+            android:strokeWidth="7"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M25,78 L33,98 L41,78" />
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#000000"
+            android:strokeWidth="7"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M48,98 L48,78 C56,78 56,89 48,89" />
+        <path
+            android:fillColor="#00000000"
+            android:strokeColor="#000000"
+            android:strokeWidth="7"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:pathData="M62,98 L62,78 L74,98 L74,78" />
+    </group>
+</vector>
